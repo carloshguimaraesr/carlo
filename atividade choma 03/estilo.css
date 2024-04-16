@@ -1,0 +1,208 @@
+body{
+    background-color: rgba(90, 35, 90, 0.555);
+}
+
+section{
+   
+   
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.teclado {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 10px;
+    margin-top: 5px;
+    padding-left: 10px;
+    margin-left: 150px;
+    margin-right: 150px ;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px; 
+    padding: 10px; 
+    background-color: rgba(49, 18, 49, 0.555);
+}
+            
+
+.button{
+
+width: 50px;
+height: 50px;
+border: none;
+color: white;
+background-color:   #352f2e;
+cursor: pointer;
+border-radius: 10px;
+transition: background-color 0.3s;
+outline: none;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: center;
+}
+
+
+.B1{
+
+width: 50px;
+height: 50px;
+border: none;
+color: white;
+background-color:   #352f2e;
+cursor: pointer;
+border-radius: 10px;
+transition: background-color 0.3s;
+outline: none;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#titulo{
+    
+    text-align: center;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.F{
+width: 50px;
+height: 50px;
+border: none;
+color: white;
+background-color:  rgb(33, 124, 33);
+cursor: pointer;
+border-radius: 10px;
+transition: background-color 0.3s;
+outline: none;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.A{
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: rgba(238, 238, 8, 0.808);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .enter{
+width: 80px;
+height: 50px;
+border: none;
+color: white;
+background-color:   #352f2e;
+cursor: pointer;
+border-radius: 10px;
+transition: background-color 0.3s;
+outline: none;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+font-family:Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .apagar{
+width: 80px;
+height: 50px;
+border: none;
+color: white;
+background-color:   #352f2e;
+cursor: pointer;
+border-radius: 10px;
+transition: background-color 0.3s;
+outline: none;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+font-family:Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .B2{
+
+width: 50px;
+height: 50px;
+border: none;
+color: white;
+background-color:   #352f2e;
+cursor: pointer;
+border-radius: 10px;
+transition: background-color 0.3s;
+outline: none;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+font-family:Georgia, 'Times New Roman', Times, serif;
+opacity: 0.3;
+
+    }
+
+    .BS{
+
+width: 50px;
+height: 50px;
+border: none;
+color: white;
+background-color:rgba(90, 35, 90, 0.555);
+cursor: pointer;
+border-radius: 10px;
+transition: background-color 0.3s;
+outline: none;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+font-family:Georgia, 'Times New Roman', Times, serif;
+opacity: 0.7;
+
+
+
+    }
+
+    .r{
+        width: 50px;
+        height: 50px;
+        border: none;
+        color: white;
+        background-color:   #352f2e;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+        outline: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        opacity: 0.5;
+
+    }
+
+    .u{
+        width: 50px;
+        height: 50px;
+        border: none;
+        color: white;
+        background-color:   #352f2e;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+        outline: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        opacity: 0.5;
+
+    }
+
+    .i{
+        width: 50px;
+        height: 50px;
+        border: none;
+        color: white;
+        background-color:   #352f2e;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+        outline: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        opacity: 0.5; 
+
+    }

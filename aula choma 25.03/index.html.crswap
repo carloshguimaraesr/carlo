@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apresentação de dados</title>
+</head>
+<body>
+
+    <h1>mostrar dados</h1>
+
+    <button onclick="log()">console log</button>
+
+    <buttonbutton onclick="alerta()">alerta</button>
+    
+    <buttonbutton onclick="write()"> write</button>
+    
+    <button onclick="inner('<h2>escrevendo no write</h2>')"> innerHTML</button>
+    <button onclick="mudarCor()"></button>
+
+    <h2 id="saida"></h2>
+    
+    <script src="app.js"></script>
+
+</body>
+</html>

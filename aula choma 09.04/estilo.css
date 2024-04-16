@@ -1,0 +1,17 @@
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.input button{
+    width: 100px;
+
+}
+.input input[type='text']{
+
+    width:90%;
+
+}

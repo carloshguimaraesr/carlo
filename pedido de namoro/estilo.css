@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(221, 65, 99);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container{
+
+    text-align:  center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(106, 2, 204);
+
+
+}
+
+button{
+    padding: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color:rgb(240, 0, 0);
+}

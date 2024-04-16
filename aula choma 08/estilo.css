@@ -1,0 +1,17 @@
+body{
+
+        background-color: antiquewhite;
+        margin: 50px;
+        
+}
+
+#cabeçalho {
+
+    background-color: white;
+    text-align: center;
+
+    padding: 250px;
+    width: 150px;
+    
+
+}

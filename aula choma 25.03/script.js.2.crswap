@@ -1,0 +1,22 @@
+function  log(){
+console.log("mwnsagem em log");
+console.log("operação no log"+(3+5));
+
+}
+
+
+
+function alerta(){
+    window.alerta("mensagem do popup.;")
+
+}
+
+function write(){
+
+
+}
+
+function innerHTML(){
+
+
+}

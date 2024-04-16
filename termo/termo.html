@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela e Teclado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6e5c62;
+            color: #fafaff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #4c4347;
+        }
+
+        td {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #352f2e;
+            cursor: pointer;
+            position: relative;
+            font-size: 1.5em;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(9, auto);
+            gap: 10px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 20px; 
+            padding: 10px; 
+            background-color: #4c4347;
+        }
+
+        .button {
+            width: 60px;
+            height: 60px;
+            border: none;
+            color: #fafaff;
+            font-size: 1.5em; 
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+            outline: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            background-color: #352f2e;
+        }
+
+        .button:hover {
+            background-color: #2a2524;
+        }
+
+        .button.large {
+            width: 140px;
+            grid-column: span 2;
+        }
+
+        .button.small {
+            width: 140px;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TERMO</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="green">S</td>
+                    <td class="green">A</td>
+                    <td class="green">N</td>
+                    <td class="green">T</td>
+                    <td class="green">O</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="keyboard">
+            <button class="button">A</button>
+            <button class="button">B</button>
+            <button class="button">C</button>
+            <button class="button">D</button>
+            <button class="button">E</button>
+            <button class="button">F</button>
+            <button class="button">G</button>
+            <button class="button">H</button>
+            <button class="button">I</button>
+            <button class="button">J</button>
+            <button class="button">K</button>
+            <button class="button">L</button>
+            <button class="button">M</button>
+            <button class="button">N</button>
+            <button class="button">O</button>
+            <button class="button">P</button>
+            <button class="button">Q</button>
+            <button class="button">R</button>
+            <button class="button">S</button>
+            <button class="button">T</button>
+            <button class="button">U</button>
+            <button class="button">V</button>
+            <button class="button">W</button>
+            <button class="button">X</button>
+            <button class="button">Y</button>
+            <button class="button">Z</button>
+            <button class="button large">ENTER</button>
+            <button class="button small">APAGAR</button>
+        </div>
+    </div>
+</body>
+</html>

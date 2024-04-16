@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista Encadeada</title>
+  </head>
+  <body>
+    <h1>Lista Encadeada</h1>
+    <button onclick="inserirNoInicio()">Inserir no Início</button>
+    <button onclick="inserirNoFim()">Inserir no Fim</button>
+    <button onclick="removerDoInicio()">Remover do Início</button>
+    <button onclick="removerDoFim()">Remover do Fim</button>
+    <p id="lista"></p>
+  </body>
+
+    <script>
+      
+      class Node {
+        constructor(data) {
+          this.data = data;
+          this.next = null;
+        }
+      }
+
+      let head = null;
+      let tail = null;
+
+      
+      function inserirNoInicio() {
+        let input = prompt("Digite o elemento a ser inserido no início da lista:");
+        let novoNode = new Node(input);
+
+        if (head === null) {
+          head = novoNode;
+          tail = novoNode;
+        } else {
+          novoNode.next = head;
+          head =novoNode;
+        }
+
+        atualizarLista();
+      }
+
+      
+      function inserirNoFim() {
+        let input = prompt("Digite o elemento a ser inserido no fim da lista:");
+        let novoNode = new Node(input);
+
+        if (head === null) {
+          head = novoNode;
+          tail = novoNode;
+        } else {
+          tail.next = novoNode;
+          tail = novoNode;
+        }
+
+        atualizarLista();
+      }
+
+     
+      function removerDoInicio() {
+        if (head === null) {
+          alert("A lista") }
+        }

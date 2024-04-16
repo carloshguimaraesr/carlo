@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+
+
+}
+
+.form-grupo{
+    margin-bottom: 15px;
+
+}
+
+section{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+input[type="text"],input[type="email"],input[type="password"]{
+
+
+
+
+
+    
+}
+
+

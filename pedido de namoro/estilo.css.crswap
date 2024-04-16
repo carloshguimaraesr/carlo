@@ -1,0 +1,23 @@
+body{
+    ba
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container{
+
+    text-align:  center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:red;
+
+
+}
+
+button{
+    padding: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color:blueviolet;
+}

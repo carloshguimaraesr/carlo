@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pilha</title>
+  </head>
+  <body>
+    <h1>Pilha</h1>
+    <button onclick="empilhar()">Empilhar</button>
+    <button onclick="desempilhar()">Desempilhar</button>
+    <p id="pilha"></p>
+
+    <script>
+      // Inicializar uma pilha vazia
+      let pilha = [];
+
+      // Função para adicionar um elemento à pilha
+      function empilhar() {
+        let input = prompt("Digite o elemento a ser adicionado à pilha:");
+        pilha.push(input);
+        atualizarPilha();
+      }
+
+      // Função para remover um elemento da pilha
+      function desempilhar() {
+        if (pilha.length > 0) {
+          pilha.pop();
+          atualizarPilha();
+        } else {
+          alert("A pilha está vazia.");
+        }
+      }
+
+      // Função para atualizar a exibição da pilha
+      function atualizarPilha() {
+        document.getElementById("pilha").innerHTML = pilha.join(", ");
+      }
+    </script>
+  </body>
+</html>

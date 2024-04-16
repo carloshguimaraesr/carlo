@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f6ff; 
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .accept-terms {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="checkbox"] {
+            margin-top: 10px;
+            transform: scale(1.2);
+        }
+        .form-group {
+            clear: both;
+            overflow: hidden;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 40px; 
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff; 
+            color: #fff; 
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulário de Inscrição</h2>
+        <form action="pagina-de-destino.html" method="post">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Endereço de Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo de Inscrição:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecione...</option>
+                    <option value="participante">Participante</option>
+                    <option value="palestrante">Palestrante</option>
+                    <option value="voluntario">Voluntário</option>
+                </select>
+            </div>
+            <div class="form-group accept-terms">
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos">Aceito os termos e condições</label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Inscrever-se">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

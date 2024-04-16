@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <h1 id="saida" ></h1>
+    <h1 id="saida2"></h1>
+    <script>
+            function somar(){
+            let a = 5;
+            let b = 5;
+            return a + b;
+        }
+
+        function calcularQuadrado(valor){
+            return valor * valor;
+        }
+
+        function imprimir(valor, nomeId){
+            document.getElementById(nomeId).innerHTML = valor;
+        }
+
+        imprimir(somar(), 'saida');
+        imprimir(calcularQuadrado(15), 'saida2');
+    </script>
+   
+</body>
+</html>

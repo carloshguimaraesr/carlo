@@ -1,0 +1,26 @@
+<html> 
+    <head>
+        <title> meu site</title>
+
+    </head>
+    <body>
+        <h1> meu primeiro titulo</h1>
+        <p>meu primeiro paragrafo</p>
+        
+        <h1>meus links</h1>
+        
+         <h2>forma 1</h2>
+
+         <a href="https://open.spotify.com/intl-pt"> meu link</a>
+
+        <h2> forma 2</h2>
+        <p><a href="">catalogo</a></p>
+        <p><a href="">contato</a></p>
+
+        <h1>minhas imagens</h1>
+        <h2>forma 1</h2>
+        <p>o endereço de imagem vai dentro das aspas</p>
+        
+
+    </body>
+</html>

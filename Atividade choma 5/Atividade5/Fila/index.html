@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fila Simples</title>
+  </head>
+  <body>
+    <h1>Fila Simples</h1>
+    <button onclick="enfileirar()">Adicionar à Fila</button>
+    <button onclick="desenfileirar()">Remover da Fila</button>
+    <p id="fila"></p>
+  </body>
+
+    <script>
+      
+      let fila = [];
+
+      
+      function enfileirar() {
+        let input = prompt("Digite o elemento a ser adicionado à fila:");
+        fila.push(input);
+        atualizarFila();
+      }
+
+      
+      function desenfileirar() {
+        if (fila.length > 0) {
+          fila.shift();
+          atualizarFila();
+        } else {
+          alert("A fila está vazia.");z
+        }
+      }
+
+      
+      function atualizarFila() {
+        document.getElementById("fila").innerHTML = fila.join(", ");
+      }
+    </script>
+  </body>
+</html>
