@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mercado Online</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1>Mercado Online</h1>
+    <div class="cart-container">
+      <button class="view-cart">Ver Carrinho</button>
+      <img src="carrinho.png" alt="Carrinho" class="cart-icon">
+      <button class="login">Login</button>
+    </div>
+  </header>
+  <main>
+    <div class="catalog">
+      <h2>Produtos</h2>
+      <div class="products">
+        <div class="product" data-id="1">
+          <img src="produto1.png" alt="Óleo de Cozinha">
+          <h3>Óleo de Cozinha</h3>
+          <p>Óleo vegetal para uso culinário</p>
+          <p class="price">R$ 15.00</p> 
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="2">
+          <img src="produto2.png" alt="Arroz Branco">
+          <h3>Arroz Branco</h3>
+          <p>Arroz do tipo agulhinha, grãos longos e polidos</p>
+          <p class="price">R$ 14.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="3">
+          <img src="produto3.png" alt="Feijão">
+          <h3>Feijão</h3>
+          <p>Feijão do tipo carioca, rico em proteínas e fibras</p>
+          <p class="price">R$ 12.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="4">
+          <img src="produto4.png" alt="Macarrão">
+          <h3>Macarrão</h3>
+          <p>Macarrão do tipo espaguete, sêmola de trigo durum</p>
+          <p class="price">R$ 16.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="5">
+          <img src="produto5.png" alt="Café">
+          <h3>Café</h3>
+          <p>Café torrado e moído, sabor intenso</p>
+          <p class="price">R$ 12.00</p> 
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="6">
+          <img src="produto6.png" alt="Açúcar">
+          <h3>Açúcar</h3>
+          <p>Açúcar refinado, cristais brancos</p>
+          <p class="price">R$ 6.50</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="7">
+          <img src="produto7.png" alt="Sal">
+          <h3>Sal</h3>
+          <p>Sal refinado, iodado</p>
+          <p class="price">R$ 8.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="8">
+          <img src="produto8.png" alt="Pão Tradicional">
+          <h3>Pão Tradicional</h3>
+          <p>Pão de trigo branco, receita tradicional</p>
+          <p class="price">R$ 9.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product" data-id="9">
+          <img src="produto9.png" alt="Salgadinho">
+          <h3>Salgadinho</h3>
+          <p>Salgadinho de milho, sabor churrasco</p>
+          <p class="price">R$ 8.50</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Mercado Online © 2024</p>
+  </footer>
+  
+  <!-- Modal de Carrinho -->
+  <div class="cart-page">
+    <div class="cart-header">
+      <i class="fas fa-shopping-cart"></i>
+      <h2>Carrinho</h2>
+    </div>
+    <ul class="cart-items"></ul>
+    <div class="cart-total">Total: R$ <span class="total-amount">0.00</span></div>
+    <button class="checkout">Finalizar Compra</button>
+    <button class="close-modal">Fechar</button>
+  </div>
+  
+<!-- Modal de Finalização de Compra -->
+<div class="checkout-page">
+  <h2>Finalizar Compra</h2>
+  <form id="checkout-form">
+    <label for="name">Nome Completo:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="payment">Forma de Pagamento:</label>
+    <div class="payment-option">
+      <input type="radio" id="pix" name="payment" value="pix" required>
+      <label for="pix"><img src="pix.png" alt="PIX"> PIX</label>
+    </div>
+    <div class="payment-option">
+      <input type="radio" id="debito" name="payment" value="debito" required>
+      <label for="debito"><img src="cartao.png" alt="Cartão de Débito"> Cartão de Débito</label>
+    </div>
+    <div class="payment-option">
+      <input type="radio" id="credito" name="payment" value="credito" required>
+      <label for="credito"><img src="cartao.png" alt="Cartão de Crédito"> Cartão de Crédito</label>
+    </div>
+    <label for="address">Endereço:</label>
+    <input type="text" id="address" name="address" required>
+    <button type="submit">Confirmar</button>
+    <button type="button" class="close-modal">Cancelar</button>
+  </form>
+</div>
+
+  <!-- Modal de Login -->
+  <div class="login-modal" style="display: none;">
+    <div class="login-page">
+      <h2>Login</h2>
+      <form>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="button" onclick="logar()">Entrar</button>
+      </form>
+      <p id="respostaLogin"></p>
+      <button class="close-modal">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
