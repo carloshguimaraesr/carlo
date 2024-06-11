@@ -29,6 +29,8 @@ header .cart-container {
 
 header .cart-icon {
   width: 30px;
+  order: -1;
+  margin-left: 6px;
 }
 
 header .view-cart {
@@ -43,6 +45,7 @@ header .view-cart {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-right: 10px;
 }
 
 header .view-cart i {
@@ -231,41 +234,32 @@ button:hover {
 }
 
 .payment-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.payment-option input[type="radio"] {
-  display: none;
-}
-
-.payment-option label {
-  display: flex;
-  align-items: center;
-  background: #f9f9f9;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #fff;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.3s, border-color 0.3s;
+  display: inline-block;
 }
 
-.payment-option label:hover {
-  background-color: #e0f7ff;
+/* Estilo para quando a opção é selecionada */
+.payment-option.selected {
+  background-color: #87CEEB;
   border-color: #87CEEB;
+  color: #fff;
 }
 
-.payment-option input[type="radio"]:checked + label {
-  background-color: #d0ebff;
-  border-color: #00BFFF;
-}
-
-.payment-option label img {
+/* Estilo para a imagem dentro do rótulo */
+.payment-option img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+
+/* Esconder a entrada de rádio */
+.payment-option input[type="checkbox"] {
+  display: none;
 }
 
 footer {
@@ -396,4 +390,12 @@ footer {
 
 .close-modal:hover {
   background-color: #ff4f4f;
+}
+
+.checkout-page .confirmation-message {
+  display: none;
+}
+
+.checkout-page .confirmation-message.visible {
+  display: block;
 }

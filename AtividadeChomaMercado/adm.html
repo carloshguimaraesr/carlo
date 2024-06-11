@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Painel de Administração do Mercado</title>
     <link rel="stylesheet" href="adm.css">
 </head>
 <body>
     <header>
         <h1>Painel de Administração do Mercado</h1>
     </header>
-    <nav>
-        <a href="#adicionar">Adicionar Item</a>
-        <a href="#remover">Remover Item</a>
-        <a href="#editar">Editar Item</a>
-    </nav>
     <main>
         <section id="adicionar">
             <h2>Adicionar Item</h2>
-            <!-- Formulário para adicionar itens -->
+            <form id="addItemForm">
+                <label for="itemName">Nome do Item:</label>
+                <input type="text" id="itemName" name="itemName" required>
+                <label for="itemPrice">Preço do Item:</label>
+                <input type="number" id="itemPrice" name="itemPrice" required>
+                <button type="submit">Adicionar</button>
+            </form>
         </section>
-        <section id="remover">
+        <section id="remover">  
             <h2>Remover Item</h2>
-            <!-- Lista de itens para remover -->
+            <ul id="itemList"></ul>
         </section>
         <section id="editar">
             <h2>Editar Item</h2>
-            <!-- Formulário para editar itens -->
+            <form id="editItemForm">
+                <label for="editItemId">ID do Item:</label>
+                <input type="number" id="editItemId" name="editItemId" required>
+                <label for="editItemName">Novo Nome do Item:</label>
+                <input type="text" id="editItemName" name="editItemName" required>
+                <label for="editItemPrice">Novo Preço do Item:</label>
+                <input type="number" id="editItemPrice" name="editItemPrice" required>
+                <button type="submit">Editar</button>
+            </form>
         </section>
     </main>
-<script src="adm.js"></script>
+    <script src="adm.js"></script>
+    <script src="style.css"></script>
 </body>
 </html>

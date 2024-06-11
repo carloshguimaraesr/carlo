@@ -118,25 +118,27 @@
     <label for="name">Nome Completo:</label>
     <input type="text" id="name" name="name" required>
     <label for="payment">Forma de Pagamento:</label>
-    <div class="payment-option">
-      <input type="radio" id="pix" name="payment" value="pix" required>
-      <label for="pix"><img src="pix.png" alt="PIX"> PIX</label>
-    </div>
-    <div class="payment-option">
-      <input type="radio" id="debito" name="payment" value="debito" required>
-      <label for="debito"><img src="cartao.png" alt="Cartão de Débito"> Cartão de Débito</label>
-    </div>
-    <div class="payment-option">
-      <input type="radio" id="credito" name="payment" value="credito" required>
-      <label for="credito"><img src="cartao.png" alt="Cartão de Crédito"> Cartão de Crédito</label>
+    <div class="payment-options">
+      <label for="pix" class="payment-option" id="pix">
+        <img src="pix.png" alt="PIX"> PIX
+        <input type="checkbox" id="pix" name="payment" value="pix" style="display: none;">
+      </label>
+      <label for="debito" class="payment-option" id="debito">
+        <img src="cartao.png" alt="Cartão de Débito"> Cartão de Débito
+        <input type="checkbox" id="debito" name="payment" value="debito" style="display: none;">
+      </label>
+      <label for="credito" class="payment-option" id="credito">
+        <img src="cartao.png" alt="Cartão de Crédito"> Cartão de Crédito
+        <input type="checkbox" id="credito" name="payment" value="credito" style="display: none;">
+      </label>
     </div>
     <label for="address">Endereço:</label>
     <input type="text" id="address" name="address" required>
     <button type="submit">Confirmar</button>
+    <p class="confirmation-message" style="display: none;">Compra Confirmada com sucesso</p>
     <button type="button" class="close-modal">Cancelar</button>
   </form>
 </div>
-
   <!-- Modal de Login -->
   <div class="login-modal" style="display: none;">
     <div class="login-page">
@@ -154,6 +156,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="adm.js"></script>
 </body>
 
 </html>

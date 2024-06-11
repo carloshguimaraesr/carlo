@@ -199,3 +199,64 @@ closeModalButtons.forEach(button => {
     loginModal.style.display = 'none';
   });
 });
+
+checkoutPage.querySelector('#checkout-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  checkoutPage.classList.remove('visible');
+  // Adiciona a classe 'visible' para mostrar a mensagem de confirmação
+  confirmationMessage.classList.add('visible');
+  setTimeout(() => {
+    confirmationPage.classList.remove('visible');
+    // Remove a classe 'visible' após alguns segundos
+    confirmationMessage.classList.remove('visible');
+  }, 3000);
+  cart.length = 0;
+  updateCartTotal(); 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const paymentOptions = document.querySelectorAll('.payment-option');
+
+  paymentOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      paymentOptions.forEach(opt => {
+        opt.classList.remove('selected');
+      });
+      option.classList.add('selected');
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Função para enviar os dados dos produtos para o painel de administração
+  function sendProductsToAdminPanel() {
+      const products = document.querySelectorAll('.product');
+      const productsData = [];
+      products.forEach(product => {
+          const id = product.getAttribute('data-id');
+          const name = product.querySelector('h3').textContent;
+          const price = product.querySelector('.price').textContent.trim();
+          productsData.push({ id, name, price });
+      });
+
+      // Enviar os dados dos produtos para o painel de administração
+      fetch('http://localhost:3000/addProducts', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ products: productsData })
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Erro ao enviar os produtos para o painel de administração');
+          }
+      })
+      .catch(error => {
+          console.error(error);
+      });
+  }
+
+  // Chamada da função ao carregar a página
+  sendProductsToAdminPanel();
+});
