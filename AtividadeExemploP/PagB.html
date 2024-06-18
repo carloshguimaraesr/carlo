@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Tarefas</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .task {
+        background: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .task h5 {
+        margin: 0;
+        color: #007bff;
+    }
+    .task p {
+        margin: 5px 0;
+        color: #555;
+    }
+    .task button {
+        margin-right: 5px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .task button.btn-danger {
+        background: #dc3545;
+        color: #fff;
+    }
+    .task button.btn-danger:hover {
+        background: #c82333;
+    }
+    .task button.btn-warning {
+        background: #ffc107;
+        color: #212529;
+    }
+    .task button.btn-warning:hover {
+        background: #e0a800;
+    }
+    .link-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .link-container a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .link-container a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Lista de Tarefas</h1>
+    <div id="taskList"></div>
+    <div class="link-container">
+        <a href="PagA.html">Adicionar Tarefa</a>
+    </div>
+</div>
+
+<script>
+function loadTasks() {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    
+    tasks.forEach((task, index) => {
+        const taskItem = document.createElement('div');
+        taskItem.className = 'task';
+        
+        taskItem.innerHTML = `
+            <h5>${task.title}</h5>
+            <p>${task.description}</p>
+            <p>Data de Vencimento: ${task.dueDate}</p>
+            <p>Prioridade: ${task.priority}</p>
+            <button class="btn btn-danger" onclick="deleteTask(${index})">Excluir</button>
+            <button class="btn btn-warning" onclick="editTask(${index})">Editar</button>
+        `;
+        
+        taskList.appendChild(taskItem);
+    });
+}
+
+function deleteTask(index) {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.splice(index, 1);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    loadTasks();
+}
+
+function editTask(index) {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    const task = tasks[index];
+    
+    const title = prompt('Editar Título', task.title);
+    const description = prompt('Editar Descrição', task.description);
+    const dueDate = prompt('Editar Data de Vencimento', task.dueDate);
+    const priority = prompt('Editar Prioridade', task.priority);
+    
+    if (title && description && dueDate && priority) {
+        tasks[index] = { title, description, dueDate, priority };
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        loadTasks();
+    } else {
+        alert('Todos os campos são obrigatórios!');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadTasks);
+</script>
+</body>
+</html>

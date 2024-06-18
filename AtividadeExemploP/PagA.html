@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adicionar Tarefa</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    form .form-group {
+        margin-bottom: 15px;
+    }
+    form .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    form .form-group input,
+    form .form-group textarea,
+    form .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    form button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    form button:hover {
+        background: #0056b3;
+    }
+    .link-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .link-container a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .link-container a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Adicionar Tarefa</h1>
+    <form id="taskForm">
+        <div class="form-group">
+            <label for="title">Título:</label>
+            <input type="text" id="title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Descrição:</label>
+            <textarea id="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="dueDate">Data de Vencimento:</label>
+            <input type="date" id="dueDate" required>
+        </div>
+        <div class="form-group">
+            <label for="priority">Prioridade:</label>
+            <select id="priority" required>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+        </div>
+        <button type="submit">Adicionar Tarefa</button>
+    </form>
+</div>
+<div class="link-container">
+    <a href="PagB.html">Lista de Tarefas</a>
+</div>
+
+<script>
+document.getElementById('taskForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const dueDate = document.getElementById('dueDate').value;
+    const priority = document.getElementById('priority').value;
+    
+    const task = {
+        title: title,
+        description: description,
+        dueDate: dueDate,
+        priority: priority
+    };
+    
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    
+    document.getElementById('taskForm').reset();
+    alert('Tarefa adicionada com sucesso!');
+});
+</script>
+</body>
+</html>
